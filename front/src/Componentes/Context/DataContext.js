@@ -18,13 +18,14 @@ export const dataContext = createContext();
 
 const ProvData = ({ children }) => {
   const [productData, setProductData] = useState([]);
+  const [cart,setCart]=useState([]);
 
   useEffect(() => {
     setProductData();
   }, []);
 
   return (
-    <dataContext.Provider value={{ data: productData }}>
+    <dataContext.Provider value={{ data: productData ,cart,setCart}}>
       {children}
     </dataContext.Provider>
   );

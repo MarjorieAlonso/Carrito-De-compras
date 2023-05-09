@@ -1,8 +1,16 @@
+import CarrElement from "./CarrElement"
+import CartTotal from "./CartTotal"
+import "./Carrito.css"
 
 const Carrito = () => {
-  return (
-    <div>Carrito</div>
+  return(<>
+  
+  <CarrElement/>
+    <CartTotal/>
+  </>
+    
   )
+  
 }
 
-export default Carrito
+export default Carrito;

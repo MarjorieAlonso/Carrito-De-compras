@@ -1,5 +1,6 @@
 .productCard{
     background-color: rgb(115, 97, 133);
+    color:azure;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -10,8 +11,12 @@
     margin: 50px;
 }
 .carta button{
-    border: none;
-    color:black;
+    border: 20px;
+    color:rgba(167, 233, 60, 0.938);
     background-color: green;
     padding:10px;
+}
+.carta img{
+    width: 200px;
+    height: 200px;
 }
