@@ -1,0 +1,17 @@
+.productCard{
+    background-color: rgb(115, 97, 133);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+    text-align: center;
+}
+.carta{
+    margin: 50px;
+}
+.carta button{
+    border: none;
+    color:black;
+    background-color: green;
+    padding:10px;
+}

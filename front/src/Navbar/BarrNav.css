@@ -1,0 +1,8 @@
+.Barr-container{
+background-color: rgb(120, 120, 209);
+font-family: 'Poppins', sans-serif;
+}
+.carro{
+    display:flex;
+    justify-content: flex-end;
+}

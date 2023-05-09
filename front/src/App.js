@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
+import Home from "./Componentes/Home";
+import Carrito from "./Componentes/Cart/Carrito";
+import ProvData from "./Componentes/Context/DataContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const App = () => {
-  // -------------------------------------------------
-  // DO NOT USE THE CODE BELOW FROM LINES 8 TO 18. THIS IS
-  // HERE TO MAKE SURE THAT THE EXPRESS SERVER IS RUNNING
-  // CORRECTLY. DELETE CODE WHEN COMPLETING YOUR TEST.
+
+
+function App() {
   const [response, setResponse] = useState("");
 
-  // call server to see if its running
   useEffect(() => {
     const getApiResponse = () => {
       fetch("http://localhost:5000/")
@@ -16,16 +17,17 @@ const App = () => {
     };
     getApiResponse();
   }, []);
-  // -------------------------------------------------
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1> Prueba tecnica front Ecomsur 2021</h1>
-      <p>Borra esto y comienza aqui.</p>
-      {/* Check to see if express server is running correctly */}
-      <h5>{response}</h5>
-    </div>
+<ProvData>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path ="/cart" element={<Carrito/>}/>
+      </Routes>
+    </BrowserRouter>
+    </ProvData>
   );
-};
+}
 
 export default App;
