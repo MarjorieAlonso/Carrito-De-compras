@@ -5,12 +5,11 @@ import React from 'react'
 const CartTotal = () => {
     const {cart}= useContext(dataContext);
 
+
     const total=cart.reduce((acum,elem)=> acum + elem.price, 0)
     return(
-
-    
     <div className="CartTotal">
-        <h3>Total a pagar :${total}$</h3>
+        <h3>Total a pagar :${total}</h3>
     </div>
   )
 }
